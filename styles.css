@@ -50,6 +50,12 @@ a {
   background-color: transparent;
 }
 
+.access {
+  display: flex;
+  align-items: center;
+  justify-content: space-around; 
+}
+
 .banner-navbar-container {
   height: 100px;
   width: 95%;
@@ -64,6 +70,13 @@ a {
 .banner-navbar-link {
   font-size: 20px;
   margin: 0 15px;
+  color: #161341;
+}
+
+.banner-navbar-link:hover {
+  animation-name: change;
+  animation-duration: .5s;
+  color: #00ADC3;
 }
 
 .banner-information-container {
@@ -99,7 +112,16 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  animation: scale-down .5s;
 }
+
+.btn:hover {
+  animation: shimmer .5s, scale-up .5s;
+  opacity: 0.7;
+  transform: scale(1.02);
+}
+
+
 
 .banner-mockup {
   height: 450px;
@@ -166,7 +188,7 @@ a {
 }
 
 .wrapper-flexbox {
-  width: 40%;
+  width: 42%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -199,6 +221,14 @@ a {
   border-radius: 6px;
   box-shadow: 0px 0px 25px #D4E1F4;
   position: relative;
+  animation-name: scale-down;
+  animation-duration: .5s;
+}
+
+.membership-container:hover {
+  transform: scale(1.02);
+  animation-name: scale-up;
+  animation-duration: .5s;
 }
 
 .highlighted {
@@ -248,4 +278,43 @@ a {
 
 .footer-content {
   color: white;
+}
+
+
+/*Key Frames*/
+
+@keyframes shimmer {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes change {
+  from {
+    color: #161341;
+  }
+  to {
+    color: #00ADC3;
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes scale-down {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1);
+  }
 }
