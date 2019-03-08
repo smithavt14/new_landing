@@ -2,10 +2,11 @@ var DOM = {
   menu: document.querySelector('.mobile-navbar-menu-container'),
   hamburger: document.querySelectorAll('.mobile-navbar-icon-line'),
   exit: document.getElementById('exit'),
-  mobileNavbar: document.querySelector('.mobile-navbar')
+  mobileNavbar: document.querySelector('.mobile-navbar'),
+  mobileLink: document.querySelectorAll('.mobile-navbar-link')
 }
 
-var openMobileNav = function() {
+var toggleMobileNav = function() {
   if (DOM.mobileNavbar.classList.contains('navbar-close')) {
     DOM.mobileNavbar.classList.remove('navbar-close')
     DOM.mobileNavbar.classList.add('navbar-open')
@@ -24,11 +25,19 @@ var transformIcon = function() {
   }
 }
 
-DOM.menu.addEventListener('click', transformIcon)
+var setupEventListeners = function () {
+  DOM.menu.addEventListener('click', function() {
+    transformIcon()
+    toggleMobileNav()
+  })
 
+  for (var i = 0; i < DOM.mobileLink.length; i++) {
+    DOM.mobileLink[i].addEventListener('click', function() {
+      transformIcon()
+      toggleMobileNav()
+    })
+  }
+}
 
-// When user clicks on the hamburger
+setupEventListeners()
 
-// 1. All lines converge into the center
-// 2. All lines rotate either 45 or -45 deg
-// 3. All lines turn white
