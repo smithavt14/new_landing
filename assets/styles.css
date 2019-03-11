@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* ----- Commonly Used Styles ----- */
@@ -118,7 +118,7 @@ a {
 /* ----- Banner Styles ----- */
 
 .banner {
-  background-image: url('assets/background.png');
+  background-image: url('images/background.png');
   background-size: cover;
 }
 
@@ -147,6 +147,7 @@ a {
 /* ----- Intro Styles ----- */
 
 .intro {
+  background-color: transparent;
   padding: 100px 0;
 }
 
@@ -166,7 +167,7 @@ a {
 }
 
 .intro-icon {
-  width: 75%;
+  width: 90%;
   margin: 10px 0;
 }
 
@@ -184,25 +185,30 @@ a {
 /* ----- Activities Styles ----- */
 
 .activities {
-  background-color: transparent;
+  background-image: url('images/background-4.png');
+  background-size: cover;
+  background-position: center;
   padding: 100px 0;
 }
 
 .icon-background {
-  width: 100%;
+  width: 90%;
 }
 
 /* ----- Venues Styles ----- */
 
 .venues {
+  background-color: transparent;
   padding: 100px 0;
 }
 
 /* ----- Memberships Styles ----- */
 
 .memberships {
+  background-image: url('images/background-1.png');
+  background-size: cover;
+  background-position: center;
   padding: 100px 0;
-  background: transparent;
 }
 
 .membership-container {
@@ -261,6 +267,7 @@ a {
 /* ----- Access Styles ----- */
 
 .access {
+  background-color: transparent;
   padding: 100px 0;
 }
 
@@ -317,6 +324,10 @@ a {
 
   .navbar-container {
     display: none;
+  }
+
+  .icon-background {
+    width: 125%;
   }
 
   .mobile-navbar-menu-container {
