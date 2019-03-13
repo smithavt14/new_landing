@@ -70,6 +70,25 @@ const scrollToSection = function () {
   }
 }
 
+const activeLink = function () {
+
+  function checkPageLocation(key) {
+    window.addEventListener('scroll', function() {
+      if (DOM.sections[key].offsetTop <= window.scrollY && window.scrollY < DOM.sections[key].offsetTop + DOM.sections[key].offsetHeight) {
+        DOM.links[key].classList.add('active-link')
+      } else {
+        DOM.links[key].classList.remove('active-link')
+      }
+    })
+  }
+
+  for (var key in DOM.links) {
+    if (DOM.links.hasOwnProperty(key)) {
+      checkPageLocation(key)
+    }
+  }
+}
+
 // Our initialization function
 const setupEventListeners = function () {
   DOM.menu.addEventListener('click', function() {
@@ -89,7 +108,7 @@ const setupEventListeners = function () {
   })
 
   scrollToSection()
+  activeLink()
 }
 
 setupEventListeners()
-
