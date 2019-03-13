@@ -146,6 +146,10 @@ a {
   color: #00ADC3;
 }
 
+.active-link {
+  color: #00ADC3;
+}
+
 .navbar-move-logo {
   height: 75%;
   display: none;
@@ -158,6 +162,7 @@ a {
 .navbar-container-right {
   padding-right: 5%;
   display: flex;
+  flex-grow: 0;
 }
 
 /* ----- Banner Styles ----- */
@@ -165,7 +170,7 @@ a {
 .banner {
   background-image: url('images/background.png');
   background-size: cover;
-  height:100vh;
+  /*height:100vh;*/
 }
 
 .banner-move-logo {
@@ -479,7 +484,7 @@ a {
 
   .banner-mockup {
     width: 125%;
-    max-height: 115%;
+    height: 115%;
     margin: 0 auto;
     object-fit: contain;
   }
