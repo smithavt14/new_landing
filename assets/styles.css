@@ -13,7 +13,6 @@ a {
 
 .wrapper {
   width: 100vw;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,6 +66,11 @@ a {
   animation: shimmer .5s, scale-up .5s;
   opacity: 0.7;
   transform: scale(1.02);
+}
+
+.movego-btn {
+  background: white;
+  color: #FF7131; 
 }
 
 .right {
@@ -225,6 +229,11 @@ a {
   position: relative;
   animation-name: scale-down;
   animation-duration: .5s;
+}
+
+.movego-orange {
+  background: linear-gradient(180deg, #FF7131 0%, #FF9431 100%);
+  border: none;
 }
 
 .membership-container:hover {
