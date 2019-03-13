@@ -73,6 +73,11 @@ a {
   color: #FF7131; 
 }
 
+.universal-btn {
+  background: white;
+  color: #4EDACD;
+}
+
 .right {
   display: flex;
   flex-direction: column;
@@ -234,6 +239,7 @@ a {
 .movego-orange {
   background: linear-gradient(180deg, #FF7131 0%, #FF9431 100%);
   border: none;
+  color: white;
 }
 
 .membership-container:hover {
@@ -242,9 +248,10 @@ a {
   animation-duration: .5s;
 }
 
-.highlighted {
+.universal {
  background: linear-gradient(180deg, #4EDACD 0%, #00ADC3 100%);
  border: none;
+ color: white;
 }
 
 .membership-title {
